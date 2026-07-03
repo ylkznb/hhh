@@ -19,7 +19,7 @@ git clone [https://huggingface.co/cerspense/zeroscope_v2_576w](https://huggingfa
 git clone [https://huggingface.co/damo-vilab/text-to-video-ms-1.7b](https://huggingface.co/damo-vilab/text-to-video-ms-1.7b) ./models/model_scope/
 ```
 
-## MotionDirector with Customized Appearance
+## Motion with Customized Appearance
 
 ### Train
 
