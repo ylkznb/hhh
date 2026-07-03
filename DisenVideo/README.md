@@ -2,8 +2,8 @@
 
 ```bash
 # create virtual environment
-conda create -n motiondirector python=3.8
-conda activate motiondirector
+conda create -n motion python=3.8
+conda activate motion
 # install packages
 pip install -r requirements.txt
 ```
@@ -26,13 +26,13 @@ git clone [https://huggingface.co/damo-vilab/text-to-video-ms-1.7b](https://hugg
 Train the spatial path with reference images.
 
 ```bash
-python MotionDirector_train.py --config ./configs/config_multi_images.yaml
+python train.py --config ./configs/config_multi_images.yaml
 ```
 
 Then train the temporal path to learn the motions in reference videos.
 
 ```bash
-python MotionDirector_train.py --config ./configs/config_multi_videos.yaml
+python train.py --config ./configs/config_multi_videos.yaml
 ```
 
 ### Inference
@@ -40,5 +40,5 @@ python MotionDirector_train.py --config ./configs/config_multi_videos.yaml
 Inference with spatial path learned from reference images and temporal path learned form reference videos.
 
 ```bash
-python MotionDirector_inference_multi.py --model /path/to/the/foundation/model --prompt "Your prompt" --spatial_path_folder /path/to/the/trained/MotionDirector/spatial/lora/ --temporal_path_folder /path/to/the/trained/MotionDirector/temporal/lora/ --noise_prior 0
+python inference_multi.py --model /path/to/the/foundation/model --prompt "Your prompt" --spatial_path_folder /path/to/the/trained/Motion/spatial/lora/ --temporal_path_folder /path/to/the/trained/Motion/temporal/lora/ --noise_prior 0
 ```
